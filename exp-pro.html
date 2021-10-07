@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>CV</title>
+
+		<link rel="shortcut icon" href="Image/favicon.ico" type="image/x-icon">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	
+	<body class="grey">
+		<header>
+			<div>
+				<nav class="red" style="padding:0px 10px;">
+					<div class="nav-wrapper">
+						<a href="#" class="brand-logo">Nicolas VANDEPUTTE FÉRY</a>
+						<a href="#" class="sidenav-trigger" data-target="mobile-nav">
+							<i class="material-icons">menu</i>
+						</a>
+						<ul class="right hide-on-med-and-down">
+							<li><a href="index.html">Profil</a></li>
+							<li><a href="formation.html">Diplômes et Formations</a></li>
+							<li><a href="competence.html">Compétences</a></li>
+							<li class="active"><a href="exp-pro.html">Expériences professionnelles</a></li>
+							<li><a href="formation-perso.html">Formation Personnelles</a></li>
+							<li><a href="création-perso.html">Créations Personnelles</a></li>
+						</ul>
+					</div>
+				</nav>
+
+				<ul class="sidenav" id="mobile-nav">
+					<li><a href="index.html">Profil</a></li>
+					<li><a href="formation.html">Diplômes et Formations</a></li>
+					<li><a href="competence.html">Compétences</a></li>
+					<li class="active"><a href="exp-pro.html">Expériences professionnelles</a></li>
+					<li><a href="formation-perso.html">Formation Personnelles</a></li>
+					<li><a href="création-perso.html">Créations Personnelles</a></li>
+				</ul>
+
+				<h2 class="black-text">Expériences professionnelles</h2>
+			</div>
+		</header>
+
+		<main>
+			<div class="container">
+				<div class="carousel carousel-slider center">
+					<div class="carousel-item red white-text" href="#one!">
+					  <h2>Août 2020 </h2>
+					  <p class="white-text"><h3>Réalisation d'un programme</h3><h4>Eurial</h4><h5>Saint-Martin-de-Saint-Maixent, France</h5><h6>Réalisation d'un programme pour la suivie des taux de rendements synthétiques des lignes de productions (HTML / CSS / Python Raspberry / JavaScript)</h6></p>
+					</div>
+					<div class="carousel-item amber white-text" href="#two!">
+						<h2>Juillet 2019</h2>
+						<p class="white-text"><h3>Réalisation d'un programme</h3><h4>Eurial</h4><h5>Saint-Martin-de-Saint-Maixent, France</h5><h6>Réalisation d'une interface graphique pour l'aide à l'utilisation d'un chariot électrique (Arduino)</h6></p>
+					</div>
+					<div class="carousel-item green white-text" href="#three!">
+						<h2>Juin 2019</h2>
+						<p class="white-text"><h3>Réalisation d'un programme</h3><h4>Eurial</h4><h5>Saint-Martin-de-Saint-Maixent, France</h5><h6>Création d'un programme d'adressage d'IP automatique pour un réseau industriel (C#)</h6></p>
+					</div>
+					<div class="carousel-item blue white-text" href="#three!">
+						<h2>Juin 2016</h2>
+						<p class="white-text"><h3>Réalisation d'une analyse fonctionnelle</h3><h4>Eurial</h4><h5>Saint-Martin-de-Saint-Maixent, France</h5><h6>Réalisation d'une analyse fonctionnelle d'une machine automatisée (Graphcet)</h6></p>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer class="page-footer">
+			<address class="center-align">
+				Nom: VANDEPUTTE FÉRY -
+				Prénom: Nicolas -
+				Adresse: 56, rue de la plaine -
+						 79000, NIORT -
+				Tel: 0612649303 -
+				<a href="mailto:nicolas.vandeputte-fery@epitech.eu">nicolas.vandeputte-fery@epitech.eu</a>
+			</address>	
+		</footer>
+
+		<script>
+			$(document).ready(function(){
+				$('.sidenav').sidenav();
+		  	});
+
+			$('.carousel.carousel-slider').carousel({
+    			fullWidth: true,
+    			indicators: true
+			});
+		</script>
+	</body>
+</html>

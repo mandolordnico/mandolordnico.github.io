@@ -1,0 +1,60 @@
+body{
+    background-color: var(--black-color);
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: var(--yellow-color);
+    color: var(--black-color);
+}
+
+.responsive {
+    width: 100%;
+    height: auto;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--black-color);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--yellow-color);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--yellow-color);
+}
+
+hr{
+    width: 75%;
+    align: center;
+    background-color: red;
+    size: 50px
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.responsive1image{
+    height: 100%;
+    width: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .responsive1image{
+        width: 100%;
+        height: auto;
+    }
+}
