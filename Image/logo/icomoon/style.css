@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?c1x4nw');
-  src:  url('fonts/icomoon.eot?c1x4nw#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?c1x4nw') format('truetype'),
-    url('fonts/icomoon.woff?c1x4nw') format('woff'),
-    url('fonts/icomoon.svg?c1x4nw#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?4k40w');
+  src:  url('fonts/icomoon.eot?4k40w#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4k40w') format('truetype'),
+    url('fonts/icomoon.woff?4k40w') format('woff'),
+    url('fonts/icomoon.svg?4k40w#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-creation:before {
+  content: "\e906";
+}
 .icon-gantelet:before {
   content: "\e900";
 }
@@ -34,10 +37,10 @@
 .icon-droid:before {
   content: "\e903";
 }
-.icon-Blurrg:before {
+.icon-armes:before {
   content: "\e904";
 }
-.icon-141817:before {
+.icon-casque:before {
   content: "\e905";
 }
 .icon-logo_mythosaure:before {
