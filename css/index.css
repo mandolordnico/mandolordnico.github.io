@@ -16,6 +16,11 @@ footer {
     height: auto;
 }
 
+.responsiveAcceuil{
+    width: auto;
+    height: 100%;
+}
+
 /* SCROLLBAR */
 /* width */
 ::-webkit-scrollbar {
@@ -32,4 +37,31 @@ footer {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--yellow-color);
+}
+
+blockquote
+{
+    font-style: normal;
+    font-size: 16px;
+    margin-left: 32px;
+    font-family: Consolas, "Times New Roman", Verdana;
+    border-left: 4px solid red;
+    padding-left: 8px;
+}
+
+@font-face {
+    font-family:"Mandoa";
+    src: url("../font/mandalor.ttf") format("truetype");
+}
+
+.intro{
+    font-family: Mandoa, "Times New Roman", Verdana;
+    font-style: normal;
+    font-size: 24px;
+}
+
+hr{
+    width: 75%;
+    align: center;
+    background-color: red;
 }

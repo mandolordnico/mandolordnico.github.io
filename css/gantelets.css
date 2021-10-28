@@ -64,3 +64,9 @@ footer {
     background-color: red;
     height: 10px
 }
+
+hr{
+    width: 75%;
+    align: center;
+    background-color: red;
+}

@@ -30,7 +30,7 @@
     <nav class="nav responsive">
         <div>
             <div class="nav_list">
-                <a href="index.html" class="nav_link active">
+                <a href="index.html" class="nav_link">
                     <span class="icon-logo_mythosaure" style="font-size: 200%"></span>
                     <span class="nav_name">Accueil</span>
                 </a>
@@ -54,7 +54,7 @@
                     <span class="icon-droid" style="font-size: 200%"></span>
                     <span class="nav_name">Accessoires</span>
                 </a>
-                <a href="autres_creations.html" class="nav_link">
+                <a href="autres_creations.html" class="nav_link active">
                     <span class="icon-creation" style="font-size: 200%"></span>
                     <span class="nav_name">Autres réalisations</span>
                 </a>
@@ -64,7 +64,7 @@
 </div>
 <!--Container Main start-->
 <div class="height-100">
-    <h4>Mes autres créations</h4>
+    <h2><U>Mes autres créations :</U></h2>
     <br>
     <div class="row">
         <div class="column">
@@ -73,23 +73,19 @@
         <div class="column">
             <img src="./Image/autres_creations/ackbar.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
         </div>
+        <HR>
         <div class="column">
             <img src="./Image/autres_creations/holo_empereur.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
         </div>
         <div class="column">
-            <img src="./Image/autres_creations/holo_empereur.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+            <img src="./Image/autres_creations/holo_empereur.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+        <HR>
+        <div class="column">
+            <img src="./Image/autres_creations/grenade.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
         </div>
         <div class="column">
-            <div class="container container-video">
-                <iframe src="https://www.youtube.com/embed/F9XTvgC8cCI"
-                        frameborder="0" allowfullscreen class="video"></iframe>
-            </div>
-        </div>
-        <div class="column">
-            <div class="container container-video">
-                <iframe src="https://www.youtube.com/embed/THtIU0F5SoE"
-                        frameborder="0" allowfullscreen class="video"></iframe>
-            </div>
+            <img src="./Image/autres_creations/tourelle.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
         </div>
     </div>
 
@@ -153,28 +149,20 @@
                     Réalisé en impression 3D.">
                 </div>
                 <div class="column">
-                    <div class="demo container container-video" title="Petite grenade" onclick="currentSlide(5)">
-                        <iframe src="https://www.youtube.com/embed/F9XTvgC8cCI"
-                                frameborder="0" allowfullscreen class="video"
-                                title="Petite grenade" onclick="currentSlide(5)">
-                        </iframe>
-                    </div>
+                    <img class="demo cursor" src="./Image/autres_creations/grenade.jpg" style="width:100%" onclick="currentSlide(5)" alt="Petite grenade">
                 </div>
                 <div class="column">
-                    <div class="demo container container-video" title="Tourelle laser : <br>
+                    <img class="demo cursor" src="./Image/autres_creations/tourelle.jpg" style="width:100%" onclick="currentSlide(6)" alt="Tourelle laser : <br>
                         Réalisation de la partie mécanique, du son et de la lumière des canons. <br>
                         Réalisation des &quot;écrans&quot; et de la possibilité de tirer à distance.<br>
-                        Réalisation du boitier de batterie."
-                         onclick="currentSlide(6)">
-                        <iframe src="https://www.youtube.com/embed/THtIU0F5SoE"
-                                frameborder="0" allowfullscreen class="video">
-                        </iframe>
-                    </div>
+                        Réalisation du boitier de batterie.">
                 </div>
             </div>
         </div>
         <span class="close cursor" onclick="closeModal()">&times;</span>
     </div>
+    <br>
+    <HR>
     <br>
 </div>
 <!--Container Main end-->
@@ -215,12 +203,7 @@
         }
         slides[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " active";
-        if (dots[slideIndex-1].alt == null)
-        {
-            captionText.innerHTML = dots[slideIndex-1].title;
-        } else {
-            captionText.innerHTML = dots[slideIndex-1].alt;
-        }
+        captionText.innerHTML = dots[slideIndex-1].alt;
     }
 </script>
 
