@@ -78,7 +78,7 @@
             <img src="./Image/autres_creations/holo_empereur.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
         </div>
         <div class="column">
-            <img src="./Image/autres_creations/holo_empereur.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+            <img src="./Image/autres_creations/dl18-1.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
         </div>
         <HR>
         <div class="column">
@@ -94,33 +94,33 @@
 
             <div class="mySlides">
                 <div class="numbertext">1 / 6</div>
-                <img src="./Image/autres_creations/ackbar-grade.jpg" style="width:100%">
+                <img src="./Image/autres_creations/ackbar-grade.jpg" style="width:100%" id="1">
             </div>
             <div class="mySlides">
                 <div class="numbertext">2 / 6</div>
-                <img src="./Image/autres_creations/ackbar.jpg" style="width:100%">
+                <img src="./Image/autres_creations/ackbar.jpg" style="width:100%" id="2">
             </div>
 
             <div class="mySlides">
                 <div class="numbertext">3 / 6</div>
-                <img src="./Image/autres_creations/holo_empereur.jpg" style="width:100%">
+                <img src="./Image/autres_creations/holo_empereur.jpg" style="width:100%" id="3">
             </div>
             <div class="mySlides">
                 <div class="numbertext">4 / 6</div>
-                <img src="./Image/autres_creations/holo_empereur.jpg" style="width:100%">
+                <img src="./Image/autres_creations/dl18.jpg" style="width:100%" id="4">
             </div>
             <div class="mySlides">
                 <div class="numbertext">5 / 6</div>
                 <div class="container container-video">
                     <iframe src="https://www.youtube.com/embed/F9XTvgC8cCI"
-                            frameborder="0" allowfullscreen class="video"></iframe>
+                            frameborder="0" allowfullscreen class="video" id="5"></iframe>
                 </div>
             </div>
             <div class="mySlides">
                 <div class="numbertext">6 / 6</div>
                 <div class="container container-video">
                     <iframe src="https://www.youtube.com/embed/THtIU0F5SoE"
-                            frameborder="0" allowfullscreen class="video"></iframe>
+                            frameborder="0" allowfullscreen class="video" id="6"></iframe>
                 </div>
             </div>
 
@@ -145,7 +145,7 @@
                      Réalisé en impression 3D transparent.">
                 </div>
                 <div class="column">
-                    <img class="demo cursor" src="./Image/autres_creations/holo_empereur.jpg" style="width:100%" onclick="currentSlide(4)" alt="Blaster DL-18 : <br>
+                    <img class="demo cursor" src="./Image/autres_creations/dl18-1.jpg" style="width:100%" onclick="currentSlide(4)" alt="Blaster DL-18 : <br>
                     Réalisé en impression 3D.">
                 </div>
                 <div class="column">
@@ -189,12 +189,34 @@
     }
 
     function showSlides(n) {
+        console.log("TEST");
         var i;
         var slides = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("demo");
         var captionText = document.getElementById("caption");
+
         if (n > slides.length) {slideIndex = 1}
         if (n < 1) {slideIndex = slides.length}
+
+
+        // STOPPER VIDEO
+        var indexActuel = slideIndex;
+        for(i = 1; i <= slides.length; i++)
+        {
+            if (indexActuel != i)
+            {
+                var videoContainer = document.getElementsByTagName("iframe");
+                for (a = 0; a < videoContainer.length; a++){
+                    //console.log("iframe = " + videoContainer[a].id);
+                    if (videoContainer[a].id == i)
+                    {
+                        var iframeSrc = videoContainer[a].src;
+                        videoContainer[a].src = iframeSrc;
+                    }
+                }
+            }
+        }
+
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
@@ -202,6 +224,7 @@
             dots[i].className = dots[i].className.replace(" active", "");
         }
         slides[slideIndex-1].style.display = "block";
+
         dots[slideIndex-1].className += " active";
         captionText.innerHTML = dots[slideIndex-1].alt;
     }
